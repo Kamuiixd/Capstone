@@ -1,0 +1,28 @@
+body {
+    background-color: #fdfdfd;
+  }
+  
+  .navbar {
+    background-color: #3498db;
+  }
+  
+  .navbar a {
+    color: white !important;
+  }
+  
+  .jumbotron {
+    background-color: #f1f1f1;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  .card {
+    margin-top: 20px;
+  }
+  
+  .card-body img {
+    margin-bottom: 20px;
+  }
+  
+  .progress-bar {
+    background-color: #28a745;
+  }
