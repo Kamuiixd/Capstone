@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
     <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #5dade2;">
       <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Equilibrium Laboral</a>
+          <!-- Ícono en la barra de navegación -->
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+              <img src="/images/icons8-cerebro-64.png" alt="Icono" style="width: 40px; height: 40px; margin-right: 10px;">
+              Equilibrium Laboral
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
@@ -45,118 +48,58 @@
       </div>
   </nav>
 
-    <div class="card mb-3 container text-center" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="/images/ansiedad.png" class="img-fluid rounded-start" alt="ansiedad">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Ansiedad</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <button type="button" class="btn btn-primary">Más Consejos</button>
-            </div>
-          </div>
+  <style>
+    .card-container {
+        display: flex;
+        gap: 1cm; /* Espacio de 1 cm entre las tarjetas */
+        margin-top: 1cm; /* Espacio adicional en la parte superior si es necesario */
+        overflow-x: auto; /* Permite el desplazamiento horizontal si es necesario */
+    }
+    .card {
+        width: 18rem;
+    }
+</style>
+</head>
+<body>
+<!-- Contenedor de tarjetas -->
+<div class="card-container">
+    <div class="card">
+        <img src="/images/ansiedad1.jpg" class="card-img-top" alt="">
+        <div class="card-body">
+            <h5 class="card-title">Trastorno de Ansiedad</h5>
+            <p class="Ansiedad">La ansiedad es una respuesta natural del cuerpo ante situaciones que percibimos como amenazantes o estresantes. Es una emoción que se manifiesta a través de sentimientos de preocupación, miedo o aprensión.</p>
+            <button type="button" class="btn btn-primary">Más Consejos</button>
         </div>
-      </div> 
-      <div class="card mb-3 container text-center" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="/images/depresion.png" class="img-fluid rounded-start" alt="Depresion">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Depresion</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <button type="button" class="btn btn-primary">Más Consejos</button>
-            </div>
-          </div>
+    </div>
+
+    <div class="card">
+        <img src="/images/depresion.jpg" class="card-img-top" alt="">
+        <div class="card-body">
+            <h5 class="card-title">Depresión</h5>
+            <p class="Depresión">Un trastorno del estado de ánimo caracterizado por sentimientos persistentes de tristeza, pérdida de interés en actividades y alteraciones en el sueño y el apetito.</p>
+            <button type="button" class="btn btn-primary">Más Consejos</button>
         </div>
-      </div> 
-      <div class="card mb-3 container text-center" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="/images/depresion.png" class="img-fluid rounded-start" alt="Depresion">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Trastorno de oposición desafiante</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <button type="button" class="btn btn-primary">Más Consejos</button>
-            </div>
-          </div>
+    </div>
+
+    <div class="card">
+        <img src="/images/bipolar.jpeg" class="card-img-top" alt="">
+        <div class="card-body">
+            <h5 class="card-title">Trastorno Bipolar</h5>
+            <p class="Trastorno Bipolar">Implica cambios extremos en el estado de ánimo, desde episodios de euforia (manía) hasta períodos de depresión.</p>
+            <button type="button" class="btn btn-primary">Más Consejos</button>
         </div>
-      </div> 
-      <div class="card mb-3 container text-center" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="/images/ansiedad.png" class="img-fluid rounded-start" alt="ansiedad">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Trastorno de la conducta</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <button type="button" class="btn btn-primary">Más Consejos</button>
-            </div>
-          </div>
-        </div>
-      </div> 
-      <div class="card mb-3 container text-center" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="/images/depresion.png" class="img-fluid rounded-start" alt="Depresion">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Trastorno por déficit de atención e hiperactividad (TDAH)</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <button type="button" class="btn btn-primary">Más Consejos</button>
-            </div>
-          </div>
-        </div>
-      </div> 
-      <div class="card mb-3 container text-center" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="/images/ansiedad.png" class="img-fluid rounded-start" alt="ansiedad">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Síndrome de Gilles de la Tourette</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <button type="button" class="btn btn-primary">Más Consejos</button>
-            </div>
-          </div>
-        </div>
-      </div> 
-      <div class="card mb-3 container text-center" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="/images/depresion.png" class="img-fluid rounded-start" alt="Depresion">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Trastorno obsesivo-compulsivo</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <button type="button" class="btn btn-primary">Más Consejos</button>
-            </div>
-          </div>
-        </div>
-      </div> 
-      <div class="card mb-3 container text-center" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="/images/ansiedad.png" class="img-fluid rounded-start" alt="ansiedad">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Trastorno por estrés postraumático</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <button type="button" class="btn btn-primary">Más Consejos</button>
-            </div>
-          </div>
-        </div>
-      </div> 
+    </div>
+    <div class="card">
+      <img src="/images/estres1.webp" class="card-img-top" alt="">
+      <div class="card-body">
+          <h5 class="card-title">Estres</h5>
+          <p class="Estres">El estrés es una reacción natural del cuerpo ante situaciones que percibimos como desafiantes o amenazantes. Puede ser causado por diversas razones, como la presión en el trabajo, problemas personales, o cambios en la vida. </p>
+          <button type="button" class="btn btn-primary">Más Consejos</button>
+      </div>
+  </div>
+
+</div>
+  
 <!-- Footer -->
     <footer class="bg-light text-center py-3 mt-5">
         <p>© 2024 Equilibrium Laboral. Todos los derechos reservados.</p>

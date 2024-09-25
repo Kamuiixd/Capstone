@@ -3,12 +3,16 @@ body {
   }
   
   .navbar {
-    background-color: #3498db;
+    background-color: #5dade2;
   }
   
   .navbar a {
     color: white !important;
   }
+
+  .navbar-custom {
+    background-color: #5dade2; /* Cambia este color al que prefieras */
+}
   
   .jumbotron {
     background-color: #f1f1f1;
@@ -24,5 +28,6 @@ body {
   }
   
   .progress-bar {
-    background-color: #28a745;
+    background-color:#5dade2;
   }
+ 
