@@ -1,8 +1,9 @@
 # plataforma/views.py
 
-from firebase_admin import auth
+from firebase_admin import auth, firestore
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.http import JsonResponse
 
 # Definimos la función 'index'
 def index(request):
@@ -15,7 +16,7 @@ def perfil(request):
     return render(request, 'plataforma/perfil.html')
 
 # Definimos la Funcion Guardado de registro
-def register_user(request):
+def registro(request):
     if request.method == 'POST':
         email = request.POST['email']
         password = request.POST['password']
@@ -23,16 +24,24 @@ def register_user(request):
         try:
             # Crear usuario en Firebase Authentication
             user = auth.create_user(email=email, password=password)
-            # Aquí puedes añadir lógica adicional para guardar otros detalles en Firestore
-            # o en tu base de datos en Django.
 
-            return redirect('login')  # Redirige al inicio de sesión después de registrarse
+            # Opcionalmente, también guarda información en Firestore
+            db = firestore.client()
+            user_ref = db.collection('users').document(user.uid)
+            user_ref.set({
+                'email': email,
+                'uid': user.uid,
+            })
+
+            messages.success(request, "Usuario registrado exitosamente.")
+            return redirect('login')  # Redirigir al login o a otra página
         except Exception as e:
-            return render(request, 'registro.html', {'error': str(e)})
+            messages.error(request, f"Error registrando el usuario: {e}")
+            return render(request, 'registro.html')
     
     return render(request, 'registro.html')
 
-def login_user(request):
+def login(request):
     if request.method == 'POST':
         email = request.POST['email']
         password = request.POST['password']
@@ -55,3 +64,23 @@ def login_user(request):
             return redirect('login')
 
     return render(request, 'login.html')
+
+def test_firebase_auth(request):
+    try:
+        # Reemplaza este correo con uno que ya esté registrado en Firebase Authentication
+        email = "usuario_prueba@ejemplo.com"
+        
+        # Obtener el usuario por correo
+        user = auth.get_user_by_email(email)
+        
+        # Si la conexión es exitosa, retornamos detalles del usuario
+        return JsonResponse({
+            "uid": user.uid,
+            "email": user.email,
+            "mensaje": "Conexión con Firebase Authentication exitosa."
+        })
+    except Exception as e:
+        return JsonResponse({
+            "mensaje": "Error conectando con Firebase Authentication.",
+            "error": str(e)
+        })
